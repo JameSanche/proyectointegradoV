@@ -30,10 +30,6 @@ jobs:
       - name:  🔧 Instalar dependencias
         run: pip install -e .
 
-      - name: ▶️ Ejecutar script actividad1.py
-        run: | 
-          python src\bgdata\actividad1.py
-
       - name: ▶️ Ejecutar script prueba.py
         run: |
           python prueba.py
