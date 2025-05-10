@@ -57,8 +57,8 @@ Este proyecto realiza la recolección, transformación y almacenamiento de datos
 ### 🧱 Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/tu_repo.git
-cd tu_repo
+git clone https://github.com/JameSanche/proyectointegradoV.git
+cd \ proyectointegradoV
 ```
 
 ### 🐍 Crear entorno virtual
