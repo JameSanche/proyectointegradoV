@@ -8,11 +8,10 @@ class Collector:
     def __init__(self, logger):
         self.url = 'https://finance.yahoo.com/quote/MELI/history/?period1=1186752600&period2=1746847132'
         self.logger = logger
-        
-        if not os.path.exists('src/PIV/static'):
-            os.makedirs('src/PIV/static') 
-        if not os.path.exists('src/PIV/static/data'):
-            os.makedirs('src/PIV/static/data')
+        self.ensure_directories()
+
+    def ensure_directories(self):
+        os.makedirs('src/PIV/static/data', exist_ok=True)
 
     def collector_data(self):
         class_name = 'Collector'
@@ -72,8 +71,3 @@ class Collector:
         except Exception as error:
             self.logger.error(class_name, function_name, f"Error al obtener los datos de la url: {error}")
             return pd.DataFrame()
-
-
-
-
-

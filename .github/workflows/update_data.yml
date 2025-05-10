@@ -32,7 +32,7 @@ jobs:
 
       - name: ▶️ Ejecutar script main.py
         run: |
-          python src/PIV/prueba.py
+          python src/PIV/main.py
 
       - name: 🔄 Commit y Push de cambios
         uses: stefanzweifel/git-auto-commit-action@v5
