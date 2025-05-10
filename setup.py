@@ -11,6 +11,7 @@ setup(
         'openpyxl',
         'requests',
         'pandas',
+        'beautifulsoup4',
     ],
 
 )
