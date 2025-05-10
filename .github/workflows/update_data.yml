@@ -30,9 +30,9 @@ jobs:
       - name:  🔧 Instalar dependencias
         run: pip install -e .
 
-      - name: ▶️ Ejecutar script prueba.py
+      - name: ▶️ Ejecutar script main.py
         run: |
-          python prueba.py
+          python src/PIV/prueba.py
 
       - name: 🔄 Commit y Push de cambios
         uses: stefanzweifel/git-auto-commit-action@v5
