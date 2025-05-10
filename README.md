@@ -54,38 +54,56 @@ Este proyecto realiza la recolección, transformación y almacenamiento de datos
 
 ## ⚙️ Instalación y ejecución local
 
+### 🧱 Clonar el repositorio
+
 ```bash
-# Clonar el repositorio
 git clone https://github.com/tu_usuario/tu_repo.git
 cd tu_repo
+```
 
-# Crear entorno virtual
+### 🐍 Crear entorno virtual
+
+```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: .\venv\Scripts\activate
+source venv/bin/activate        # En Windows: .\venv\Scripts\activate
+```
 
-# Instalar dependencias
+### 📦 Instalar dependencias
+
+```bash
 pip install -e .
+```
 
-# Ejecutar el script
+### ▶️ Ejecutar el script
+
+```bash
 python src/PIV/main.py
-🔁 Automatización con GitHub Actions
-Cada vez que haces un push a la rama main, se ejecuta automáticamente:
+```
 
-Se activa un entorno virtual en GitHub Actions.
+---
 
-Se instalan las dependencias.
+### 🔁 Automatización con GitHub Actions
 
-Se ejecuta el scraping (main.py o prueba.py).
+Cada vez que haces un push a la rama `main`, se ejecuta automáticamente:
 
-Los archivos generados (.csv, .db, logs) se suben automáticamente al repositorio si hay cambios.
+1. Se activa un entorno virtual.
+2. Se instalan las dependencias.
+3. Se ejecuta el scraping (`main.py` o `prueba.py`).
+4. Los archivos generados (`.csv`, `.db`, logs) se suben automáticamente si hubo cambios.
 
-📂 Archivos generados
-meli_data.csv: Datos históricos crudos desde Yahoo Finance.
+---
 
-historical_meli.db: Mismos datos pero almacenados como tabla SQLite.
+### 📂 Archivos generados
 
-logs/dolar_analysis_*.log: Logs detallados de cada ejecución.
+- `meli_data.csv`: Datos históricos crudos desde Yahoo Finance.
+- `historical_meli.db`: Mismos datos almacenados como tabla SQLite.
+- `logs/dolar_analysis_*.log`: Logs detallados de cada ejecución.
 
-👤 Autores
-James Sánchez                              Patricia Franco
-Correo: james.sanchez@iudigital.edu.co     
+---
+
+### 👥 Autores
+
+**James Sánchez**  
+Correo: james.sanchez@iudigital.edu.co  
+
+**Patricia Franco**
