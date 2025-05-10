@@ -17,17 +17,27 @@ Este proyecto realiza la recolección, transformación y almacenamiento de datos
 
 ## 🛠️ Estructura del Proyecto
 
-📦 src/
-└── PIV/
-├── static/
-│ └── data/
-│ ├── meli_data.csv
-│ └── historical_meli.db
-├── main.py # Punto de entrada principal
-├── prueba.py # Script alternativo de ejecución
-├── collector.py # Recolección de datos (scraping)
-├── logger.py # Sistema de logging
-└── models/ # (Reservado para modelos de datos si aplica)
+📁 src
+├── .github/
+│ └── workflows/
+│ └── main.yml # Workflow de GitHub Actions
+├── docs/ # Carpeta opcional para documentación
+├── logs/ # Carpeta donde se guardan los logs generados
+├── src/
+│ └── PIV/
+│ ├── static/
+│ │ └── data/
+│ │ ├── meli_data.csv # Datos en formato CSV
+│ │ └── historical_meli.db # Base de datos SQLite
+│ ├── pycache/ # Caché de Python
+│ ├── collector.py # Clase encargada del scraping y guardado
+│ ├── logger.py # Clase Logger con configuración personalizada
+│ ├── main.py # Script principal de ejecución
+│ └── prueba.py # Script alternativo para pruebas
+├── models/ # Carpeta para modelos (opcional)
+├── setup.py # Configuración para instalación como paquete
+├── README.md # Este archivo
+├── .gitignore # Archivos/Carpetas ignorados por Git
 
 
 
@@ -74,6 +84,6 @@ historical_meli.db: Mismos datos pero almacenados como tabla SQLite.
 
 logs/dolar_analysis_*.log: Logs detallados de cada ejecución.
 
-👤 Autor
-James Sánchez
-Correo: james.sanchez@iudigital.edu.co
+👤 Autores
+James Sánchez                              Patricia Franco
+Correo: james.sanchez@iudigital.edu.co     
