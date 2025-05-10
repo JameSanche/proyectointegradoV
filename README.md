@@ -97,7 +97,6 @@ Cada vez que haces un push a la rama `main`, se ejecuta automáticamente:
 
 - `meli_data.csv`: Datos históricos crudos desde Yahoo Finance.
 - `historical_meli.db`: Mismos datos almacenados como tabla SQLite.
-- `logs/dolar_analysis_*.log`: Logs detallados de cada ejecución.
 
 ---
 
