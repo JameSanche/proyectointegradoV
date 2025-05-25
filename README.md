@@ -1,15 +1,18 @@
 # 📊 MercadoLibre, Inc - Histórico de MELI
 
-Este proyecto realiza la recolección, transformación y almacenamiento de datos históricos de la acción de MercadoLibre (MELI) desde Yahoo Finance. Utiliza web scraping para obtener la información y la guarda tanto en formato CSV como en una base de datos SQLite.
+Este proyecto realiza la recolección,  enriquecimineto,  transformación y almacenamiento de datos históricos de la acción de MercadoLibre (MELI) desde Yahoo Finance. Se utiliza Web Scraping para extraer los datos y se aplican técnicas de ingeniería de características, modelado predictivo y análisis de series temporales. La solución se automatiza mediante GitHub Actions.
 
 ---
 
 ## 🚀 Funcionalidad
 
-- Obtiene datos históricos de MELI desde Yahoo Finance.
-- Guarda los datos en:
-  - Archivo CSV: `meli_data.csv`
-  - Base de datos SQLite: `historical_meli.db`
+
+- Recolección automatizada de datos históricos desde Yahoo Finance.
+- Enriquecimiento de datos con KPIs: volatilidad, tasa de variación, media móvil, etc.
+- Modelado predictivo usando Random Forest.
+- Análisis y visualización de series temporales con descomposición, ACF, PACF y ARIMA.
+- Almacenamiento en CSV y base de datos SQLite.
+- Automatización mediante GitHub Actions (CI/CD).
 - Registra logs de ejecución en archivos con timestamp en la carpeta `logs/`.
 
 
@@ -28,16 +31,20 @@ Este proyecto realiza la recolección, transformación y almacenamiento de datos
 │   └── PIV/
 │       ├── static/
 │       │   └── data/
-│       │       ├── meli_data.csv         # Datos en formato CSV
-│       │       └── historical_meli.db    # Base de datos SQLite
-│       ├── collector.py                  # Clase encargada del scraping y guardado
-│       ├── logger.py                     # Clase Logger con configuración personalizada
-│       ├── main.py                       # Script principal de ejecución
-│       └── prueba.py                     # Script alternativo para pruebas
-├── models/                               # Carpeta para modelos (opcional)
-├── setup.py                              # Configuración para instalación como paquete
-├── README.md                             # Este archivo
-├── .gitignore                            # Archivos/Carpetas ignorados por Git
+│       │       ├── meli_data_enricher.csv         # Datos enriquecidos en formato CSV
+│       │       ├── historical_meli_enricher.db    # Base de datos enriquecidos SQLite
+|       |       ├── meli_data.csv                  # Datos en formato CSV
+│       │       └── historical_meli.db             # Base de datos SQLite
+│       ├── collector.py                           # Clase encargada del scraping y guardado
+│       ├── enricher.py                            # Cálculo de KPIs
+│       ├── logger.py                              # Clase Logger con configuración personalizada
+│       ├── main.py                                # Script principal de ejecución
+│       ├── modeller.py                            # Modelado y predicción
+│       └── prueba.py                              # Script alternativo para pruebas
+├── models/                                        # Carpeta para modelos (opcional)
+├── setup.py                                       # Configuración para instalación como paquete
+├── README.md                                      # Este archivo
+├── .gitignore                                     # Archivos/Carpetas ignorados por Git
 ```
 
 
@@ -96,7 +103,10 @@ Cada vez que haces un push a la rama `main`, se ejecuta automáticamente:
 ### 📂 Archivos generados
 
 - `meli_data.csv`: Datos históricos crudos desde Yahoo Finance.
+- `meli_data_enriquecido.csv`: Datos enriquecidos con KPIs.
 - `historical_meli.db`: Mismos datos almacenados como tabla SQLite.
+- `modelo_dolar.pkl`: Modelo entrenado con Random Forest.
+- `historical_meli_enriched.db`: Base de datos enriquecida.
 
 ---
 
