@@ -50,10 +50,13 @@ class Collector:
                 'Open': 'abrir',
                 'High': 'max',
                 'Low': 'min',
-                'Close*': 'cerrar',
-                'Adj Close**': 'cierre_ajustado',
+                'CloseClose price adjusted for splits.': 'cerrar',
+                'Adj CloseAdjusted close price adjusted for splits and dividend and/or capital gain distributions.': 'cierre_ajustado',
                 'Volume': 'volumen'
             })
+            
+            df['fecha'] = pd.to_datetime(df['fecha'], format='%b %d, %Y', errors='coerce')
+
 
             # Guardar CSV
             csv_path = 'src/PIV/static/data/meli_data.csv'
