@@ -10,7 +10,7 @@ class Modeller:
     def __init__(self, logger):
         self.logger = logger
         self.model_ruta = "src/PIV/static/models/"
-        self.pkl_ruta = os.path.join(self.model_ruta, "modelo_dolar.pkl")
+        self.pkl_ruta = os.path.join(self.model_ruta, "modelo.pkl")
 
         if not os.path.exists(self.model_ruta):
             os.makedirs(self.model_ruta)
