@@ -24,9 +24,11 @@ Este proyecto realiza la recolección,  enriquecimineto,  transformación y alma
 📁 src
 ├── .github/
 │   └── workflows/
-│       └── update_data.yml              # Workflow de GitHub Actions
-├── docs/                         # Carpeta opcional para documentación
-├── logs/                         # Carpeta donde se guardan los logs generados
+│       └── update_data.yml                        # Workflow de GitHub Actions
+├── docs/                                          # Carpeta opcional para documentación
+|   ├── report_final.pdf                           # Reporte y documentacion
+|   └── presentation.mkv                           # Video explicativo del proyecto
+├── logs/                                          # Carpeta donde se guardan los logs generados
 ├── src/
 │   └── PIV/
 │       ├── static/
